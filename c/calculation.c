@@ -11,8 +11,8 @@ int main()
 	char symbol;
 	float calc;
 
-	printf("Choose a calculation method from below: \n");
-	printf("-\n+\n/\n*\n");
+	printf("Choose a calculation method from below(You must enter a symbol, + for example): \n");
+	printf("1. -\n2. +\n3. /\n4. *\n");
 	scanf("%c", &symbol);
 	printf("Enter the first number: ");
 	scanf("%f", &number);
@@ -22,7 +22,7 @@ int main()
 	{
 		calc = number - number2;
 	}
-	else if (symbool == '+')
+	else if (symbol == '+')
 	{
 		calc = number + number2;
 	}
@@ -34,7 +34,7 @@ int main()
 	{
 		calc = number * number2;
 	}
-	printf("%.2f\n", calc);
+	printf("Result: %.2f\n", calc);
 
 	return (0);
 }
