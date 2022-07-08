@@ -12,13 +12,13 @@ int main()
 	float calc;
 
 	printf("Choose a calculation method from below(You must enter a symbol, + for example): \n");
-	printf("1. -\n2. +\n3. /\n4. *");
+	printf("1. -\n2. +\n3. /\n4. *\n");
+	scanf("%c", &symbol);
 	while (symbol != '-' || symbol != '+' || symbol != '/' || symbol != '*')
 	{
 		printf("Please enter a valid symbol: ");
 		scanf("%c", &symbol);
 	}
-	scanf("%c", &symbol);
 	printf("Enter the first number: ");
 	scanf("%f", &number);
 	printf("Enter the second number: ");
