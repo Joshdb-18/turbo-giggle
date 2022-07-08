@@ -14,32 +14,35 @@ int main()
 	printf("Choose a calculation method from below(You must enter a symbol, + for example): \n");
 	printf("1. -\n2. +\n3. /\n4. *\n");
 	scanf("%c", &symbol);
-	while (symbol != '-' || symbol != '+' || symbol != '/' || symbol != '*')
+	if (symbol != '-' || symbol != '+' || symbol != '/' || symbol != '*')
 	{
-		printf("Please enter a valid symbol: ");
-		scanf("%c", &symbol);
-	}
-	printf("Enter the first number: ");
-	scanf("%f", &number);
-	printf("Enter the second number: ");
-	scanf("%f", &number2);
-	if (symbol == '-')
-	{
-		calc = number - number2;
-	}
-	else if (symbol == '+')
-	{
-		calc = number + number2;
-	}
-	else if (symbol == '/')
-	{
-		calc = number / number2;
+		printf("Invalid symbol\n");
+		return (2);
 	}
 	else
 	{
-		calc = number * number2;
-	}
-	printf("Result: %.2f\n", calc);
+		printf("Enter the first number: ");
+		scanf("%f", &number);
+		printf("Enter the second number: ");
+		scanf("%f", &number2);
+		if (symbol == '-')
+		{
+			calc = number - number2;
+		}
+		else if (symbol == '+')
+		{
+			calc = number + number2;
+		}
+		else if (symbol == '/')
+		{
+			calc = number / number2;
+		}
+		else
+		{
+			calc = number * number2;
+		}
+		printf("Result: %.2f\n", calc);
 
-	return (0);
+		return (0);
+	}
 }
